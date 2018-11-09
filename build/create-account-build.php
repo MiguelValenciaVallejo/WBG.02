@@ -8,11 +8,9 @@
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
     <p>
     <?php
-        // set test_inputs for SWITCH
-        (isset($_SESSION['test_inputs'])?$test_inputs=$_SESSION['test_inputs']:$test_inputs='');
-        (isset($_COOKIE['test_inputs'])?$test_inputs=$_COOKIE['test_inputs']:$test_inputs='');
-        echo $test_inputs;
-
+    // set when submitted with different values for different warngins
+    // comes from create-account.php which calls create-account-build to test inputs
+    if (isset($test_inputs)) {
         switch ($test_inputs) {
             case 'missing_inputs':
                 echo "All fields are required";
@@ -34,6 +32,7 @@
                 # code...
                 break;
         }
+    }
     ?>
     </p>
     <!-- input for email -->

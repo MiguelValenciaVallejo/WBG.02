@@ -3,7 +3,6 @@
 require_once('support/constants-used.php');
 
 function test_inputs(){
-
     // ---- STEP 1: CLEAN VARIABLES
 
     // create database connection
