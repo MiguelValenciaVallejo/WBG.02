@@ -11,7 +11,6 @@ if (isset($_POST['submit'])) {
 
     // enter results into session & cookie
     setcookie('test_inputs',$test_inputs);
-    session_start();
     $_SESSION['test_inputs'] = $test_inputs;
 }
 

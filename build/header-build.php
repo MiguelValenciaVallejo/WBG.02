@@ -4,5 +4,4 @@
     <p><a href="index.php">Homepage</a></p>
     <p><a href="login.php">Login:</a></p>
     <p><a href="library.php">My Library</a></p>
-    <p><a href="edit-library.php">Edit My Library</a></p>
 </body>

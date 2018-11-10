@@ -5,6 +5,6 @@
     <title>My Library | Where Bloggers Go</title>
 </head>
 <body>
-    <p>working</p>
+    <h3><a href="edit-library.php">Edit Library</a></h3>
 </body>
 </html>

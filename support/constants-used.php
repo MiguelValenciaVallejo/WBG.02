@@ -5,6 +5,11 @@ define('USER', 'root');
 define('PASS', '');
 define('NAME', 'wbg');
 
+// start session once for everypage
+if (session_id() == '') {
+    session_start();
+}
+
 // redirect once logged-in to this page
 define('TO_INDEX', 'http://localhost/WBG.02/index.php');
 

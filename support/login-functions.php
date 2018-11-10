@@ -39,13 +39,13 @@ function test_inputs(){
 
     // store account_id in cookie and session
     setcookie('account_id', $account_id);
-    session_start();
     $_SESSION['account_id'] = $account_id;
 
     // close connection
     mysqli_close($dbc);
 
-    // logged in successfully, go to index.php
-    header("location: ". TO_INDEX);
+    // reload to login page changing what is shown
+    header("location:".TO_LOGIN, true, 302);
+    exit;
 }
 ?>

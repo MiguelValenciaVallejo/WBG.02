@@ -86,8 +86,6 @@ function test_inputs(){
         // store in cookie
         setcookie('account_id', $account_id);
 
-        // store in session
-        session_start();
         $_SESSION['account_id'] = $account_id;
 
     } else{
