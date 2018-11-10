@@ -99,6 +99,6 @@ function test_inputs(){
     mysqli_close($dbc);
 
     // go to my-tiles page to begin adding more information
-    header("location: ". POST_CREATE_PAGE);
+    header("location: ". TO_EDIT_LIBRARY);
 }
 ?>

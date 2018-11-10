@@ -1,9 +1,8 @@
 <?php
 // build for the header of each page
 require_once('build/header-build.php');
-
-echo $_COOKIE['user_id'];
-
+// constants used in page
+require_once('support/constants-used.php');
 // build structure for this page
-require_once('build/my-library-build.php');
+require_once('build/library-build.php');
 ?>

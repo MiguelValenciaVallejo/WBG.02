@@ -46,6 +46,6 @@ function test_inputs(){
     mysqli_close($dbc);
 
     // logged in successfully, go to index.php
-    header("location: ". POST_LOGIN_PAGE);
+    header("location: ". TO_INDEX);
 }
 ?>
