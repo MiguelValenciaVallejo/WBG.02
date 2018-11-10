@@ -13,7 +13,6 @@ if (isset($_POST['submit'])) {
     setcookie('test_inputs',$test_inputs);
     session_start();
     $_SESSION['test_inputs'] = $test_inputs;
-    session_destroy();
 }
 
 // build for new account form

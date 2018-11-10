@@ -9,5 +9,5 @@ define('NAME', 'wbg');
 define('POST_LOGIN_PAGE', 'http://localhost/WBG.02/index.php');
 
 // redirect after creating account to this page
-define('POST_CREATE_PAGE', 'http://localhost/WBG.02/my-stuff.php');
+define('POST_CREATE_PAGE', 'http://localhost/WBG.02/my-library.php');
 ?>
