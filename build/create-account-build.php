@@ -27,6 +27,10 @@
             case 'email_used':
                 echo "That email is already associated with an account <a href='login.php'>Login?</a>";
                 break;
+            case 'error':
+                // there was an error getting accound-Id from new account
+                echo "There was an error with the connection. We apologize, try to reconnect";
+                break;
 
             default:
                 # code...

@@ -68,7 +68,37 @@ function test_inputs(){
     mysqli_query($dbc, $query) or die('test inputs could not enter new user into DB');
     echo "created new account";
 
+    // ---- STEP 5: get new account_id and store it
+    $query="SELECT account_id
+            FROM account_information
+            WHERE email='$email'
+            AND password='$password'";
+
+    // send query
+    $result = mysqli_query($dbc, $query) or die('could not get account_id in test_inputs to store');
+
+    // check results to see if new account was found and store account_Id
+    if (mysqli_num_rows($result) == 1) {
+        // get acc_id from DB
+        $row = mysqli_fetch_array($result);
+        $account_id = $row['account_id'];
+
+        // store in cookie
+        setcookie('account_id', $account_id);
+
+        // store in session
+        session_start();
+        $_SESSION['account_id'] = $account_id;
+
+    } else{
+        // there was an error, please reconnect
+        return 'error';
+    }
+
     // close connection with DB
     mysqli_close($dbc);
+
+    // go to my-tiles page to begin adding more information
+    header("location: ". POST_CREATE_PAGE);
 }
 ?>
